@@ -49,8 +49,10 @@ jobs:
         with:
           go-version: '1.25.3'
       - name: Download Go modules
+        working-directory: backend
         run: go mod download
       - name: Run backend unit tests
+        working-directory: backend
         run: go test -v $(go list ./... | grep -v '/e2e')
       - name: Build backend Docker image
         run: docker build -t kubewatcher-backend:ci ./backend
