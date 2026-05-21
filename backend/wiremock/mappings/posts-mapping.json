@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/posts"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": [
+      {
+        "userId": 1,
+        "id": 1,
+        "title": "Sample external post",
+        "body": "This is a sample post body returned by Wiremock for E2E tests."
+      },
+      {
+        "userId": 1,
+        "id": 2,
+        "title": "Second external post",
+        "body": "Second mock body used by external API tests."
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+# Environment files
+*.env
+.env.*
+*.sh
+backend/env/*.env
+backend/env/.env*
+frontend/.env*
+
+# Node dependencies and frontend artifacts
+/frontend/node_modules
+/frontend/dist
+/frontend/.turbo
+/frontend/.cache
+/frontend/.vite
+
+# Go build / binary artifacts
+/backend/cmd/app
+**/app
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+
+# IDE and system files
+.vscode
+.DS_Store
+Thumbs.db
+
+# Docker compose generated files
+docker-compose.override.yml
+
+# Misc
+rbac.yaml
