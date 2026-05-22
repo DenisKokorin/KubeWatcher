@@ -33,7 +33,7 @@ jobs:
         run: go vet $(go list ./... | grep -v '/e2e') || true
       - name: Install frontend dependencies
         working-directory: frontend
-        run: npm ci
+        run: npm ci --omit=optional
       - name: Run frontend linter
         working-directory: frontend
         run: npm run lint || true
@@ -68,7 +68,7 @@ jobs:
           node-version: '20'
       - name: Install frontend dependencies
         working-directory: frontend
-        run: npm ci
+        run: npm ci --omit=optional
       - name: Run frontend unit tests
         working-directory: frontend
         run: npm run test:run
